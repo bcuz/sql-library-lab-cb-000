@@ -51,5 +51,5 @@ def select_character_names_and_number_of_books_they_are_in
   # 'select name,  from characters inner join series on characters.series_id = series.id group by name, books'
 
   # that just gives total characters for each book. incremental just like anything else
-  "select name, count(character_id) from character_books join characters on character_books.character_id = characters.id group by character_id order by count(character_id), name"
+  "select name, count(character_id) from character_books join characters on character_books.character_id = characters.id group by character_id order by count(character_id) desc, name"
 end
